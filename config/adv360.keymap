@@ -45,7 +45,8 @@
         shift_alt_macro: shift_alt_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT>;
+            bindings = <&macro_press>, <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
             label = "SHIFT_ALT_MACRO";
         };
     };
@@ -57,7 +58,7 @@
             bindings = <
 &kp EQUAL   &kp N1              &kp N2            &kp N3    &kp N4     &kp N5  &tog 1                                                                            &mo 3              &kp N6  &kp N7  &kp N8     &kp N9      &kp N0                   &kp MINUS
 &kp TAB     &kp Q               &kp W             &kp F     &kp P      &kp B   &kp C_MUTE                                                                        &kp C_PLAY         &kp J   &kp L   &kp U      &kp Y       &kp SEMI                 &kp BSLH
-&kp ESC     &kp A               &kp R             &kp S     &kp T      &kp G   &kp C_VOLUME_UP  &kp C_REPEAT   &kp LEFT_ALT      &kp RIGHT_ALT     &kp LEFT_WIN  &kp C_VOLUME_DOWN  &kp M   &kp N   &kp E      &kp I       &kp O                    &kp SQT
+&kp ESC     &kp A               &kp R             &kp S     &kp T      &kp G   &kp C_VOLUME_UP  &key_repeat    &kp LEFT_ALT      &kp RIGHT_ALT     &kp LEFT_WIN  &kp C_VOLUME_DOWN  &kp M   &kp N   &kp E      &kp I       &kp O                    &kp SQT
 &kp DELETE  &hm LEFT_CONTROL Z  &kp X             &kp C     &kp D      &kp V                                   &kp HOME          &kp PAGE_UP                                        &kp K   &kp H   &kp COMMA  &kp PERIOD  &hm RIGHT_CONTROL SLASH  &kp EXCL
 &mo 2       &kp GRAVE           &shift_alt_macro  &kp LEFT  &kp RIGHT          &kp SPACE        &kp BACKSPACE  &hml 1 END        &hml 1 PAGE_DOWN  &kp ENTER     &kp RIGHT_SHIFT            &kp UP  &kp DOWN   &kp LBKT    &kp RBKT                 &mo 2
             >;
